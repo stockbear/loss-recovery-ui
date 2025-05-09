@@ -86,7 +86,7 @@ def update_state_and_save_config(key: str, value: Any, source_field: Optional[st
     st.session_state[key] = value
     if source_field: # 어떤 필드 변경으로 이 업데이트가 트리거됐는지 기록
         st.session_state._last_financial_input_source = source_field
-    save_user_config(st.session_state)
+    # save_user_config(st.session_state)
 
 def update_edited_data(tab_index: int, recovery_leverage_key: int, edited_df: pd.DataFrame):
     st.session_state.edited_data[(tab_index, recovery_leverage_key)] = edited_df

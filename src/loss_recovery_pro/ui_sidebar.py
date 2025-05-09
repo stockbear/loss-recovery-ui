@@ -62,10 +62,10 @@ def render_sidebar():
                 st.session_state.initial_capital = round(calculated_capital, 0)
         
         # 모든 변경 후 설정 저장 (하나의 함수에서 모든 업데이트 처리 후 저장)
-        save_user_config_keys = ["initial_capital", "market_loss_input_pct", "loss_margin_pct_at_loss", "actual_loss_amount", "max_recovery_trades"]
-        config_to_save = {k:st.session_state[k] for k in save_user_config_keys}
-        from .app_state import save_user_config # 순환참조 피하기 위해 여기서 임포트
-        save_user_config(config_to_save)
+        # save_user_config_keys = ["initial_capital", "market_loss_input_pct", "loss_margin_pct_at_loss", "actual_loss_amount", "max_recovery_trades"]
+        # config_to_save = {k:st.session_state[k] for k in save_user_config_keys}
+        # from .app_state import save_user_config # 순환참조 피하기 위해 여기서 임포트
+        # save_user_config(config_to_save)
 
 
     # --- 입력 위젯들 ---
